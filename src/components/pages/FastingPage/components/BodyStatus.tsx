@@ -43,7 +43,6 @@ const BodyStatus: FC<Readonly<IInfoModelProps>> = ({
             title={t('bodyStatus')}
             onBackClick={onClose}
             showBtn={true}
-            isLastQuestion={false}
             fixed={true}
             withShadow={false}
             isTransparent={true}

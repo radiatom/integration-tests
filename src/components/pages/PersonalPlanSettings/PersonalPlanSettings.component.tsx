@@ -96,7 +96,6 @@ const PersonalPlanSettings: FC<Readonly<IPersonalPlanSettingsProps>> = () => {
             title={t('personalPlanSettings')}
             onBackClick={() => navigate(-1)}
             showBtn={true}
-            isLastQuestion={false}
             fixed={true}
             withShadow={false}
             isTransparent

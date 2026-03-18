@@ -28,7 +28,6 @@ const InfoModel: FC<Readonly<IInfoModelProps>> = ({ isOpen, onClose, activeModel
           }
           onBackClick={onClose}
           showBtn={true}
-          isLastQuestion={false}
           fixed={true}
           withShadow={false}
           isTransparent={true}

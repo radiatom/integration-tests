@@ -60,7 +60,6 @@ const WorkoutsPage = () => {
             fixed
             title={group.name}
             showBtn={true}
-            isLastQuestion={false}
             withShadow={true}
             onBackClick={() => navigate(-1)}
           />

@@ -50,7 +50,8 @@
     "build": "craco build",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "test": "craco test"
+    "test": "craco test",
+    "coverage": "npm test -- --coverage --watchAll --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx} --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +70,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

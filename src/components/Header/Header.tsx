@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 
 import arrowBackSvg from '@/assets/images/svg/arrow-back-thin.svg'
 
@@ -7,7 +7,6 @@ interface HeaderProps {
   title?: string
   onBackClick?: () => void
   showBtn?: boolean
-  isLastQuestion?: boolean
   hideHeader?: boolean
   hideBtnHeader?: boolean
   hideBackHeader?: boolean
@@ -23,7 +22,6 @@ const Header: FC<Readonly<HeaderProps>> = ({
   withShadow,
   fixed,
   isTransparent,
-  isLastQuestion,
   hideNav,
   showBtn,
   hideBtnHeader,
@@ -31,11 +29,6 @@ const Header: FC<Readonly<HeaderProps>> = ({
   onBackClick,
   hideHeader,
 }) => {
-  const [showOnLastQuestion, setShowOnLastQuestion] = useState(isLastQuestion)
-  useEffect(() => {
-    setShowOnLastQuestion(false)
-  }, [isLastQuestion])
-
   // return
   return (
     <div
@@ -53,7 +46,7 @@ const Header: FC<Readonly<HeaderProps>> = ({
           </div>
           <h3
             className={`${
-              !hideHeader && !showOnLastQuestion ? 'opacity-100 visible' : 'opacity-0  invisible'
+              !hideHeader ? 'opacity-100 visible' : 'opacity-0  invisible'
             } font-medium text-center font-outfit transition-all duration-300 text-base`}
           >
             {title}

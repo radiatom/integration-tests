@@ -30,7 +30,6 @@ browser_version: ${browserData.version}
           title={t('help')}
           onBackClick={() => navigate(ROUTES.APP_SETTINGS)}
           showBtn={true}
-          isLastQuestion={false}
           fixed={true}
           withShadow={true}
         />

@@ -20,13 +20,7 @@ export function FAQ() {
     <>
       <Layout>
         <div className="overflow-y-auto min-h-full pb-4 pt-0 overflow-x-hidden">
-          <Header
-            title="FAQs"
-            onBackClick={() => navigate(-1)}
-            showBtn={true}
-            isLastQuestion={false}
-            fixed={true}
-          />
+          <Header title="FAQs" onBackClick={() => navigate(-1)} showBtn={true} fixed={true} />
           <Accordion type="single" collapsible className={'px-4'}>
             <AccordionItem className="border-b border-border  mt-7" value="item-1">
               <AccordionTrigger className="flex-1 py-4 transition-all  [&[data-state=open]>img]:rotate-180 text-base font-semibold w-full flex items-center justify-between text-left">

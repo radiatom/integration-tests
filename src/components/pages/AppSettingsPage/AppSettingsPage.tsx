@@ -16,7 +16,6 @@ const AppSettingsPage = () => {
           title={t('appSettings')}
           onBackClick={() => navigate(ROUTES.PLAN)}
           showBtn={true}
-          isLastQuestion={false}
           fixed={true}
           withShadow={true}
         />

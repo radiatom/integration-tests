@@ -17,7 +17,6 @@ const PersonalDataManagementPage = () => {
           title={t('personalDataManagement')}
           onBackClick={() => navigate(-1)}
           showBtn={true}
-          isLastQuestion={false}
           fixed={true}
           withShadow={true}
         />

@@ -45,7 +45,6 @@ const Models: FC<Readonly<IModelsProps>> = ({
             title={t('changeFastingType')}
             onBackClick={onClose}
             showBtn={true}
-            isLastQuestion={false}
             fixed={true}
             withShadow={false}
             isTransparent={true}

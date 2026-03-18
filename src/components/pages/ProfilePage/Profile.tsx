@@ -34,7 +34,6 @@ const ProfilePage: React.FC = () => {
             title={t('profile')}
             onBackClick={() => navigate(ROUTES.PLAN)}
             showBtn={true}
-            isLastQuestion={false}
             fixed={true}
           />
 

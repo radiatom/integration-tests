@@ -52,7 +52,6 @@ const ManageSubscriptionPage: React.FC = () => {
           title={t('manageSubscription')}
           onBackClick={() => navigate(-1)}
           showBtn={true}
-          isLastQuestion={false}
           fixed={true}
         />
 

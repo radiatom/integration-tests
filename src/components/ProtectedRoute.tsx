@@ -1,0 +1,22 @@
+import React from 'react'
+import { Navigate } from 'react-router-dom'
+import { useAuth } from '@/providers/AuthContext'
+import { ROUTES } from '@/constants/routes'
+
+interface ProtectedRouteProps {
+  children: React.ReactNode
+}
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+  const { isAuthenticated, isInitialized } = useAuth()
+
+  if (!isInitialized) {
+    return <div>Loading...</div>
+  }
+
+  if (!isAuthenticated) {
+    return <Navigate to={ROUTES.LOGIN} replace />
+  }
+
+  return <>{children}</>
+}

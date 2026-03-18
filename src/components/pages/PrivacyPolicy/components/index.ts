@@ -1,0 +1,5 @@
+export { PrivacyPolicyEn } from './PrivacyPolicyEn'
+export { PrivacyPolicyDe } from './PrivacyPolicyDe'
+export { PrivacyPolicyPt } from './PrivacyPolicyPt'
+export { PrivacyPolicyEs } from './PrivacyPolicyEs'
+export { PrivacyPolicyFr } from './PrivacyPolicyFr'

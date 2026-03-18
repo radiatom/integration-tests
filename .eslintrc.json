@@ -1,0 +1,64 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "tailwindcss": {
+      "whitelist": ["burger","text-muted-foreground","fire-path","spinner","stars-container"]
+    }
+  },
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react", "import", "@typescript-eslint", "eslint-plugin-react","tailwindcss"],
+  "rules": {
+    "no-console": "warn",
+    "spaced-comment": "warn",
+    "no-multi-spaces": "error",
+    "react/no-children-prop": 0,
+    "import/newline-after-import": "error",
+    "import/no-absolute-path": ["error"],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": ["off"],
+    "react/display-name": ["error"],
+    "react/jsx-key": ["error"],
+    "react/no-unknown-property": "error",
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "@typescript-eslint/ban-types": "error",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "array-callback-return": "error",
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "semi": [2, "never"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "object-curly-spacing": ["error", "always"],
+    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/migration-from-tailwind-2": "off"
+  }
+}

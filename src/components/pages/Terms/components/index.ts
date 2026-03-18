@@ -1,0 +1,5 @@
+export { TermsDe } from './TermsDe'
+export { TermsEn } from './TermsEn'
+export { TermsPt } from './TermsPt'
+export { TermsEs } from './TermsEs'
+export { TermsFr } from './TermsFr'

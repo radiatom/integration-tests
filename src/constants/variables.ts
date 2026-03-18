@@ -1,0 +1,12 @@
+export const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL || ''
+export const APP_MODE = process.env.REACT_APP_MODE || ''
+export const HOMEPAGE_PATH = process.env.REACT_APP_HOMEPAGE_PATH
+export const API_URL = process.env.REACT_APP_API_URL || ''
+export const AMPLITUDE_RATE = parseInt(process.env.REACT_APP_AMPLITUDE_RATE || '1')
+export const SUPPORT_EMAIL = process.env.REACT_APP_SUPPORT_EMAIL || ''
+export const COMPANY_ADDRESS = process.env.REACT_APP_COMPANY_ADDRESS || ''
+export const SENTRY_KEY = process.env.REACT_APP_SENTRY_KEY || ''
+export const SENTRY_RATE = process.env.REACT_APP_SENTRY_RATE || '0.1'
+export const UNSUBSCRIBE_LINK = process.env.REACT_APP_UNSUBSCRIBE_LINK || ''
+export const WEB_APP_LINK = process.env.REACT_APP_WEB_APP_LINK || ''
+export const OTP_LINK = process.env.REACT_APP_OTP_LINK || ''

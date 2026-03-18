@@ -1,0 +1,5 @@
+export { MoneyBackPolicyDe } from './MoneyBackPolicyDe'
+export { MoneyBackPolicyEn } from './MoneyBackPolicyEn'
+export { MoneyBackPolicyPt } from './MoneyBackPolicyPt'
+export { MoneyBackPolicyEs } from './MoneyBackPolicyEs'
+export { MoneyBackPolicyFr } from './MoneyBackPolicyFr'

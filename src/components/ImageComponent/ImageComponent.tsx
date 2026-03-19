@@ -43,6 +43,7 @@ const ImageComponent: FC<Readonly<IImageComponentProps>> = ({
       loader={
         loader || (
           <div
+            {...rest}
             className={`${newClassName} bg-gray animate-pulse`}
             style={{ animationDuration: '2s' }}
           />
@@ -51,6 +52,7 @@ const ImageComponent: FC<Readonly<IImageComponentProps>> = ({
       unloader={
         unloader || (
           <img
+            {...rest}
             src={defaultImg || defaultSvg}
             alt={typeof src === 'string' ? src : 'default'}
             className={newClassName}

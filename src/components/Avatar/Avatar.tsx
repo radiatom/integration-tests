@@ -22,11 +22,13 @@ const Avatar: FC<Readonly<IAvatarProps>> = ({ linkImg, classNameWrapper, name, i
         <ImageComponent
           src={linkImg}
           alt={t('avatar')}
+          data-testid={'img-avatar'}
           className={`rounded-full object-cover max-w-full max-h-full ${className}`}
         />
       ) : (
         <div
           className={`grid max-w-full max-h-full items-center justify-center rounded-full bg-green object-cover capitalize ${className} text-white`}
+          data-testid={'first-letter-name-avatar'}
         >
           {name[0]}
         </div>

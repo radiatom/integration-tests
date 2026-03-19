@@ -57,16 +57,14 @@ describe('header folder', () => {
   })
 
   test('hide title', () => {
-    const title = 'hello world'
-    render(<Header hideHeader title={title} />)
+    render(<Header hideHeader />)
 
-    expect(screen.getByText(title)).toHaveClass('opacity-0', 'invisible')
+    expect(screen.getByRole('heading')).toHaveClass('opacity-0', 'invisible')
   })
 
   test('show title', () => {
-    const title = 'hello world'
-    render(<Header title={title} />)
+    render(<Header />)
 
-    expect(screen.getByText(title)).toHaveClass('opacity-100', 'visible')
+    expect(screen.getByRole('heading')).toHaveClass('opacity-100', 'visible')
   })
 })

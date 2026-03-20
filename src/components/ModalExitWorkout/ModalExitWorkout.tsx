@@ -36,6 +36,7 @@ const ModalExitWorkout: FC<Readonly<IModalProps>> = ({
         <div
           className="absolute top-3 left-3 cursor-pointer flex items-center justify-center w-[32px] h-[32px] rounded-full transition active:scale-95 bg-[#00000008] z-50 text-dark"
           onClick={error ? () => navigate(-1) : () => onClose()}
+          data-testid={'close-modal-svg'}
         >
           <IconSVG type={'CLOSE'} height={16} width={16} fill={'#B7BABE'} />
         </div>

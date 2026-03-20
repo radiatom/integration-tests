@@ -8,8 +8,8 @@ import { formatSeconds } from '@/helpers/formatSeconds'
 import Fireworks from '@/components/Fireworks/Fireworks'
 import AssistantSvg from '@/assets/images/svg/avatar-assistant.svg'
 import { Loader } from '@/components/Loader/Loader'
-import useGetCalories from '@/hooks/useGetCalories'
 import usePatchProgressPersonalTrainingQuery from '@/hooks/usePatchProgressPersonalTrainingQuery'
+import useGetCalories from '@/hooks/useGetCalories/useGetCalories'
 
 // interface
 export interface IModalProps {

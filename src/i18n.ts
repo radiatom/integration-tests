@@ -47,10 +47,11 @@ i18n
   .init({
     detection: options,
     resources,
-    debug: true,
+    debug: process.env.NODE_ENV !== 'test',
     interpolation: {
       escapeValue: false,
     },
+    lng: process.env.NODE_ENV === 'test' ? 'en' : undefined,
     supportedLngs:
       process.env.NODE_ENV === 'development'
         ? ['en', 'de', 'es', 'pt', 'fr', 'uk']

@@ -1,6 +1,7 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import Avatar from '@/components/Avatar/Avatar'
+import { render } from '@/test-utils'
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

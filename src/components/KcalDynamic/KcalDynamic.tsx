@@ -1,5 +1,5 @@
 import React, { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from 'react'
-import useGetCalories from '@/hooks/useGetCalories'
+import useGetCalories from '@/hooks/useGetCalories/useGetCalories'
 import { WorkoutData } from '@/types/interfaces'
 
 // interface

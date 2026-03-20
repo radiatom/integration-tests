@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { WorkoutData } from '@/types/interfaces'
-import useGetCalories from '@/hooks/useGetCalories'
+import useGetCalories from '@/hooks/useGetCalories/useGetCalories'
 
 // interface
 interface IKcalPlayerProps {

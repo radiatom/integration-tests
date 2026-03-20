@@ -43,7 +43,10 @@ const TrophiesPage: FC<Readonly<ITrophiesPageProps>> = () => {
           </div>
 
           {trophies && trophies.length !== 0 ? (
-            <div className={'grid grid-cols-[1fr_1fr_1fr] py-6 px-4 gap-y-3'}>
+            <div
+              className={'grid grid-cols-[1fr_1fr_1fr] py-6 px-4 gap-y-3'}
+              data-testid={'trophies-list'}
+            >
               {trophies.map((tr, key) => (
                 <TrophieCard key={`${key}_${tr}`} trophie={tr} />
               ))}

@@ -5,7 +5,7 @@ import CheckSvg from '@/assets/images/fasting/check.svg'
 import ArrowSvg from '@/assets/images/fasting/arrow-righ.svg'
 import { clsx } from 'clsx'
 import InfoModel from '@/components/pages/FastingPage/components/InfoModel'
-import { FastingLevel, FastingModel } from '@/components/pages/FastingPage/types'
+import { FastingLevel, FastingModel } from '@/components/pages/FastingPage/types/index.types'
 import Header from '@/components/Header/Header'
 
 // interface

@@ -5,7 +5,7 @@ import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Thumbs } from 'swiper/modules'
 import { clsx } from 'clsx'
 import noteSvg from '@/assets/images/fasting/note.svg'
-import { FastingModel, Stage } from '@/components/pages/FastingPage/types'
+import { FastingModel, Stage } from '@/components/pages/FastingPage/types/index.types'
 
 // interface
 interface IInfoModelProps {

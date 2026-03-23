@@ -40,3 +40,12 @@ jest.mock('@/app/settings/axios/axios', () => ({
     },
   },
 }))
+
+// module.exports = {
+//   collectCoverageFrom: [
+//     'src/**/*.{ts,tsx,js,jsx}',
+//     '!src/**/*.types.ts', // Виключаємо файли типів за назвою
+//     '!src/**/types/*.ts', // Виключаємо цілі папки з типами
+//     '!src/**/*.{stories,constants,test,spec}.{ts,tsx}',
+//   ],
+// }

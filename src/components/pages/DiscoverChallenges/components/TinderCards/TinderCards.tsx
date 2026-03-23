@@ -14,7 +14,7 @@ import GameActionBtn from '@/components/pages/DiscoverChallenges/components/Tind
 import {
   CardSwipeDirection,
   IsDragOffBoundary,
-} from '@/components/pages/DiscoverChallenges/types/cards.type'
+} from '@/components/pages/DiscoverChallenges/types/cards.types'
 import TinderCard from '@/components/pages/DiscoverChallenges/components/TinderCards/components/TinderCard/TinderCard'
 import useAcceptChallengeMutation from '@/hooks/useAcceptChallengeMutation'
 

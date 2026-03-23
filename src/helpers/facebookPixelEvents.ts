@@ -1,5 +1,5 @@
 import { track, setUserId } from '@amplitude/analytics-browser'
-import { PaymentPlan } from '@/types/types'
+import { PaymentPlan } from '@/types/types.types'
 
 export const trackPlan = (plan: PaymentPlan) => {
   track('payment:selectPlane', plan)

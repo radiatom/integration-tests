@@ -3,7 +3,7 @@ import { formatSeconds } from '@/helpers/formatSeconds'
 import { useGlobalStore } from '@/stores'
 import { differenceInSeconds, format, parseISO } from 'date-fns'
 import { useTranslation } from 'react-i18next'
-import { FastingModel, Stage } from '@/components/pages/FastingPage/types'
+import { FastingModel, Stage } from '@/components/pages/FastingPage/types/index.types'
 import { getCurrentStage, getTimeSecond } from '@/components/pages/FastingPage/helpers'
 import BodyStatus from '@/components/pages/FastingPage/components/BodyStatus'
 

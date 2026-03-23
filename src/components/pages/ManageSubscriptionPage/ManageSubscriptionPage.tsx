@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import useProfile from '@/hooks/useProfile'
 import { TabsList } from '@/components/TabsList/TabsList'
-import { TabItem } from '@/components/TabsList/types'
+import { TabItem } from '@/components/TabsList/types/index.types'
 import { Subscriptions, Profile } from './components'
 import { updateSentryUser } from '@/services/analytics/sentry-init'
 

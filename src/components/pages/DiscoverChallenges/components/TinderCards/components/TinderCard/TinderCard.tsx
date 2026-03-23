@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform, useMotionValueEvent } from 'frame
 import {
   CardSwipeDirection,
   IsDragOffBoundary,
-} from '@/components/pages/DiscoverChallenges/types/cards.type'
+} from '@/components/pages/DiscoverChallenges/types/cards.types'
 import { ChallengeInfo } from '@/types/interfaces'
 import MilestoneCard from '@/components/pages/ChallengePage/components/MilestoneCard'
 import {

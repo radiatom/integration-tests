@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Stage } from '@/components/pages/FastingPage/types'
+import { Stage } from '@/components/pages/FastingPage/types/index.types'
 import Stage0Card from '@/assets/images/fasting/stage-0-card.svg'
 
 const UseGetModelsData = (): Stage => {

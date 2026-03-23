@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import SvgIconAnswerBad from '@/assets/images/challenges/icon-answer-bad.svg'
 import SvgIconAnswerGood from '@/assets/images/challenges/icon-answer-good.svg'
-import { IsDragOffBoundary } from '@/components/pages/DiscoverChallenges/types/cards.type'
+import { IsDragOffBoundary } from '@/components/pages/DiscoverChallenges/types/cards.types'
 
 const actionPropsMatrix = {
   left: {

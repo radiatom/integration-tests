@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { TabItem } from '@/components/TabsList/types'
+import { TabItem } from '@/components/TabsList/types/index.types'
 
 interface TabsListProps {
   list: TabItem[]

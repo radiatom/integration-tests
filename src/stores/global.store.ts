@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
-import { FastingModel } from '@/components/pages/FastingPage/types'
+import { FastingModel } from '@/components/pages/FastingPage/types/index.types'
 
 interface completedFasting {
   dateStart: string

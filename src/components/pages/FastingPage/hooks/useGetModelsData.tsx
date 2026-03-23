@@ -20,7 +20,7 @@ import Stage3Card from '@/assets/images/fasting/stage-3-card.svg'
 import Stage4Card from '@/assets/images/fasting/stage-4-card.svg'
 
 import { useTranslation } from 'react-i18next'
-import { FastingLevel } from '@/components/pages/FastingPage/types'
+import { FastingLevel } from '@/components/pages/FastingPage/types/index.types'
 
 const UseGetModelsData = (): FastingLevel[] => {
   const { t } = useTranslation()

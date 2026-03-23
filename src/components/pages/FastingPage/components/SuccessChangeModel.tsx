@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { clsx } from 'clsx'
 import SuccessSvg from '@/assets/images/fasting/done.svg'
 import { useTranslation } from 'react-i18next'
-import { FastingModel } from '@/components/pages/FastingPage/types'
+import { FastingModel } from '@/components/pages/FastingPage/types/index.types'
 
 // interface
 interface ISuccessChangeModelProps {

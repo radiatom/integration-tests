@@ -1,5 +1,5 @@
 import { addPathPrefix } from '@/helpers/getPath'
-import { Question } from '@/types/types'
+import { Question } from '@/types/types.types'
 
 export const extractImageUrls = (obj: Record<string, any> | Record<string, any>[]) => {
   const urls: string[] = []

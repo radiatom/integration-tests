@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Stage } from '@/components/pages/FastingPage/types'
+import { Stage } from '@/components/pages/FastingPage/types/index.types'
 
 // interface
 interface IStageCardProps {

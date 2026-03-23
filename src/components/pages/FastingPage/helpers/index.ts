@@ -1,4 +1,4 @@
-import { Stage } from '@/components/pages/FastingPage/types'
+import { Stage } from '@/components/pages/FastingPage/types/index.types'
 
 export const getTimeSecond = (index: number, stages: Stage[]) => {
   return stages

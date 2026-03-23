@@ -8,7 +8,7 @@ import ModalEditDate from '@/components/pages/FastingPage/components/WellDone/co
 import { useGlobalStore } from '@/stores'
 import smiles from '@/assets/images/fasting/smiles.webp'
 import { clsx } from 'clsx'
-import { FastingModel } from '@/components/pages/FastingPage/types'
+import { FastingModel } from '@/components/pages/FastingPage/types/index.types'
 import useGetLocaleForDate from '@/components/pages/FastingPage/hooks/useGetLocaleForDate'
 
 // interface

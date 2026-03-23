@@ -15,7 +15,7 @@ import WellDone from '@/components/pages/FastingPage/components/WellDone/WellDon
 import BodyStatus from '@/components/pages/FastingPage/components/BodyStatus'
 import WeeksFasting from '@/components/pages/FastingPage/components/WeeksFasting'
 import useGetModelsData from '@/components/pages/FastingPage/hooks/useGetModelsData'
-import { FastingModel, Stage } from '@/components/pages/FastingPage/types'
+import { FastingModel, Stage } from '@/components/pages/FastingPage/types/index.types'
 import { nameModelStore } from '@/components/pages/FastingPage/config'
 import useGetDefaultStage from '@/components/pages/FastingPage/hooks/useGetDefaultStage'
 import { getCurrentStage } from '@/components/pages/FastingPage/helpers'

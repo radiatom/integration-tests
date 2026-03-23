@@ -33,6 +33,18 @@ module.exports = {
         '^@/(.*)$': '<rootDir>/src/$1',
         '^axios$': 'axios/dist/node/axios.cjs',
       },
+      collectCoverageFrom: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        '!src/**/*.types.ts',
+        '!src/types/**/*',
+        '!src/locales/**/*',
+        '!src/assets/**/*',
+        '!src/constants/**/*',
+        '!src/app/**/*',
+        '!src/providers/**/*',
+        '!src/**/*.{stories,constants,test,spec}.{ts,tsx}',
+        '!src/setupTests.ts',
+      ],
     },
   },
 }

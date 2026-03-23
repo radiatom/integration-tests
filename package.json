@@ -51,7 +51,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "craco test",
-    "coverage": "npm test -- --coverage --watchAll --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx} --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}"
+    "coverage": "npm test -- --coverage --watchAll"
   },
   "eslintConfig": {
     "extends": [

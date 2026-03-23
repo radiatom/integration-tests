@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Header from '@/components/Header/Header'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/Button/Button'
-import { FastingModel } from '@/components/pages/FastingPage/types'
+import { FastingModel } from '@/components/pages/FastingPage/types/index.types'
 
 // interface
 interface IInfoModelProps {

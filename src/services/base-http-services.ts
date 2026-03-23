@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-
-import axios, { AxiosResponse, RawAxiosRequestConfig } from 'axios'
+import { axios } from '@/app/settings/axios/axios'
+import { AxiosResponse, RawAxiosRequestConfig } from 'axios'
 import { ResponseError } from '@/types/error-entity'
 
 export interface CustomAxiosRequestConfig<P = any> extends RawAxiosRequestConfig<P> {

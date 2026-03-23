@@ -25,3 +25,18 @@ jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockUseNavigate,
 }))
+
+jest.mock('@/app/settings/axios/axios', () => ({
+  axios: {
+    get: jest.fn(),
+    post: jest.fn(),
+    patch: jest.fn(),
+    put: jest.fn(),
+    delete: jest.fn(),
+    defaults: {},
+    interceptors: {
+      request: { use: jest.fn() },
+      response: { use: jest.fn() },
+    },
+  },
+}))

@@ -1,16 +1,13 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
 import { render } from '@/test-utils'
-import useGetUserChallengeAvailable from '@/hooks/useGetUserChallengeAvailable'
 import DiscoverModal from '@/components/DiscoverModal/DiscoverModal'
 import user from '@testing-library/user-event'
-import { mockUseNavigate } from '@/setupTests'
-
-jest.mock('@/hooks/useGetUserChallengeAvailable')
+import { mockUseGetUserChallengeAvailable, mockUseNavigate } from '@/setupTests'
 
 describe('DiscoverModal folder', () => {
   test('isEmpty={true}', () => {
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })
@@ -21,7 +18,7 @@ describe('DiscoverModal folder', () => {
   })
 
   test('with title', () => {
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })
@@ -38,7 +35,7 @@ describe('DiscoverModal folder', () => {
   test('isEmpty={true} onHome()', async () => {
     user.setup()
     const onHome = jest.fn()
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })
@@ -52,7 +49,7 @@ describe('DiscoverModal folder', () => {
   })
 
   test('challenges undefined onHome()', async () => {
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })
@@ -63,7 +60,7 @@ describe('DiscoverModal folder', () => {
   })
 
   test('challenges []', async () => {
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })
@@ -75,7 +72,7 @@ describe('DiscoverModal folder', () => {
 
   test('there are challenges', async () => {
     user.setup()
-    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    mockUseGetUserChallengeAvailable({
       data: undefined,
       isLoading: false,
     })

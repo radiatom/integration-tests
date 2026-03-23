@@ -2,10 +2,26 @@ import React from 'react'
 import { screen } from '@testing-library/react'
 import TrophiesPage from '@/components/pages/TrophiesPage/TrophiesPage'
 import { render } from '@/test-utils'
+
+import useGetUserChallengeTrophies from '@/hooks/useGetUserChallengeTrophies'
 import { UserChallengeTrophiesResponse } from '@/types/interfaces'
 import { trophie } from '@/constants/test.contants'
 import user from '@testing-library/user-event'
-import { mockUseGetUserChallengeTrophies, mockUseNavigate } from '@/setupTests'
+import { mockUseNavigate } from '@/setupTests'
+
+jest.mock('@/hooks/useGetUserChallengeTrophies')
+
+const mockUseGetUserChallengeTrophies = ({
+  data,
+  isLoading,
+}: {
+  data: UserChallengeTrophiesResponse | undefined
+  isLoading: boolean
+}) =>
+  (useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
+    data,
+    isLoading,
+  })
 
 describe('TrophiesPage', () => {
   test('loading', () => {

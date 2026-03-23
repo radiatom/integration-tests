@@ -6,6 +6,7 @@ import '@testing-library/jest-dom'
 import '@/i18n'
 import useGetUserChallengeTrophies from '@/hooks/useGetUserChallengeTrophies'
 import { UserChallengesAvailableResponse, UserChallengeTrophiesResponse } from '@/types/interfaces'
+import useGetUserChallengeAvailable from '@/hooks/useGetUserChallengeAvailable'
 
 beforeAll(() => {
   Object.defineProperty(global.Image.prototype, 'src', {
@@ -42,31 +43,3 @@ jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockUseNavigate,
 }))
-
-// useGetUserChallengeTrophies
-jest.mock('@/hooks/useGetUserChallengeTrophies')
-export const mockUseGetUserChallengeTrophies = ({
-  data,
-  isLoading,
-}: {
-  data: UserChallengeTrophiesResponse | undefined
-  isLoading: boolean
-}) =>
-  (useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
-    data,
-    isLoading,
-  })
-
-// useGetUserChallengeAvailable
-jest.mock('@/hooks/useGetUserChallengeAvailable')
-export const mockUseGetUserChallengeAvailable = ({
-  data,
-  isLoading,
-}: {
-  data: UserChallengesAvailableResponse | undefined
-  isLoading: boolean
-}) =>
-  (useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
-    data,
-    isLoading,
-  })

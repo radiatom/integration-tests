@@ -1,9 +1,26 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
 import { render } from '@/test-utils'
+import useGetUserChallengeAvailable from '@/hooks/useGetUserChallengeAvailable'
 import DiscoverModal from '@/components/DiscoverModal/DiscoverModal'
 import user from '@testing-library/user-event'
-import { mockUseGetUserChallengeAvailable, mockUseNavigate } from '@/setupTests'
+import { mockUseNavigate } from '@/setupTests'
+import { UserChallengesAvailableResponse } from '@/types/interfaces'
+
+jest.mock('@/hooks/useGetUserChallengeAvailable')
+
+const mockUseGetUserChallengeAvailable = ({
+  data,
+  isLoading,
+}: {
+  data: UserChallengesAvailableResponse | undefined
+  isLoading: boolean
+}) => {
+  ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+    data,
+    isLoading,
+  })
+}
 
 describe('DiscoverModal folder', () => {
   test('isEmpty={true}', () => {
@@ -49,7 +66,7 @@ describe('DiscoverModal folder', () => {
   })
 
   test('challenges undefined onHome()', async () => {
-    mockUseGetUserChallengeAvailable({
+    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
       data: undefined,
       isLoading: false,
     })
@@ -60,7 +77,7 @@ describe('DiscoverModal folder', () => {
   })
 
   test('challenges []', async () => {
-    mockUseGetUserChallengeAvailable({
+    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
       data: undefined,
       isLoading: false,
     })
@@ -72,7 +89,7 @@ describe('DiscoverModal folder', () => {
 
   test('there are challenges', async () => {
     user.setup()
-    mockUseGetUserChallengeAvailable({
+    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
       data: undefined,
       isLoading: false,
     })

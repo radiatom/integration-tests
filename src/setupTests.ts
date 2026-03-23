@@ -4,6 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
 import '@/i18n'
+import useGetUserChallengeTrophies from '@/hooks/useGetUserChallengeTrophies'
+import { UserChallengeTrophiesResponse } from '@/types/interfaces'
 
 beforeAll(() => {
   Object.defineProperty(global.Image.prototype, 'src', {
@@ -18,13 +20,6 @@ beforeAll(() => {
     },
   })
 })
-
-// useNavigate
-export const mockUseNavigate = jest.fn()
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockUseNavigate,
-}))
 
 jest.mock('@/app/settings/axios/axios', () => ({
   axios: {
@@ -41,11 +36,23 @@ jest.mock('@/app/settings/axios/axios', () => ({
   },
 }))
 
-// module.exports = {
-//   collectCoverageFrom: [
-//     'src/**/*.{ts,tsx,js,jsx}',
-//     '!src/**/*.types.ts', // Виключаємо файли типів за назвою
-//     '!src/**/types/*.ts', // Виключаємо цілі папки з типами
-//     '!src/**/*.{stories,constants,test,spec}.{ts,tsx}',
-//   ],
-// }
+// useNavigate
+export const mockUseNavigate = jest.fn()
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockUseNavigate,
+}))
+
+// useGetUserChallengeTrophies
+jest.mock('@/hooks/useGetUserChallengeTrophies')
+export const mockUseGetUserChallengeTrophies = ({
+  data,
+  isLoading,
+}: {
+  data: UserChallengeTrophiesResponse | undefined
+  isLoading: boolean
+}) =>
+  (useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
+    data,
+    isLoading,
+  })

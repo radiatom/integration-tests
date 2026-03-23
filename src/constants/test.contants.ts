@@ -1,0 +1,55 @@
+export const trophie = {
+  _id: '69a934c18944161616df1b42',
+  userId: '691efc76856de37678a785e0',
+  challengeId: {
+    title: 'test 1 2 days',
+    about: 'about test ghghghghghgjfjfksldfk dlkfjdfjdlkfjd;ljkfl;dkjf;dlfj;dlkf;slkds',
+    _id: '69a06ff1a775bf011da60785',
+    categoryId: {
+      name: 'Fitness',
+      _id: '696f3309b623e0bf64195e8e',
+      slug: 'fitness',
+      createdAt: '2026-01-20T07:47:21.418Z',
+      updatedAt: '2026-02-20T16:07:18.152Z',
+    },
+    challengePeriod: 2,
+    milestoneCount: 1,
+    milestones: [
+      {
+        description: 'test decsrip dlkfgmdlfkjdlkjfd',
+        whatYouGet: "test what you'll get",
+        dayStart: 1,
+        dayEnd: 2,
+        order: 1,
+      },
+    ],
+    image:
+      'https://dnaa3818zsk1p.cloudfront.net/challenge/image/square/69a06ff1a775bf011da60785?Expires=1774714650&Key-Pair-Id=K28RKBS7PXHUPB&Signature=XaMsjgzHyf-t7aezSeRgDFPSubkQoCPWweP1EEQUHZsI~dPdrFo7oceZpktGtZpXLxEKw6cnrusJxTGl4d9pdGVGGySoiRIrNvYhi~ARvHmPvF3A54q5sdjpg67Lc63lZDqTD1-bSEQpazfNfNAxnt7zxtPKlHKv6Nzl3f4iSll5KzY1Npts2pRpM9XHpBrXuwvXSqwBl2KenYzggA-3-n-0I4c-jFASfDxvtLaATZvgt6YOMqNHDKdm6VLGJatYPt2dOHTG6RyCGkeVllJdXGLrDQFKH6gBXh4-etYCsGT9Am7d1UedgH~~b2VcL~o~YtgOq1LjNGuPOpUITr0cVw__',
+    createdAt: '2026-02-26T16:08:17.138Z',
+    updatedAt: '2026-02-26T16:10:03.170Z',
+  },
+  startDate: '2026-03-05T07:46:09.764Z',
+  endDate: '2026-03-06T07:46:09.764Z',
+  status: 'completed',
+  completionPercentage: 100,
+  daysCompleted: 2,
+  daysRemaining: 0,
+  strikesEarned: 2,
+  days: [
+    {
+      dayNumber: 1,
+      date: '2026-03-05T07:46:09.764Z',
+      completed: true,
+      markedBy: 'user',
+    },
+    {
+      dayNumber: 2,
+      date: '2026-03-06T07:46:09.764Z',
+      completed: true,
+      markedBy: 'user',
+    },
+  ],
+  createdAt: '2026-03-05T07:46:09.766Z',
+  updatedAt: '2026-03-06T07:51:44.106Z',
+  completionCount: 4,
+}

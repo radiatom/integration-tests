@@ -6,7 +6,6 @@ import trophyEmpty from '@/assets/images/challenges/trophy-empty.webp'
 import DiscoverModal from '@/components/DiscoverModal/DiscoverModal'
 import { useTranslation } from 'react-i18next'
 import TrophieCard from '@/components/pages/TrophiesPage/components/TrophieCard/TrophieCard'
-import useGetUserChallengeAvailable from '@/hooks/useGetUserChallengeAvailable'
 import useGetUserChallengeTrophies from '@/hooks/useGetUserChallengeTrophies'
 import ImageComponent from '@/components/ImageComponent/ImageComponent'
 
@@ -16,12 +15,11 @@ interface ITrophiesPageProps {}
 // component
 const TrophiesPage: FC<Readonly<ITrophiesPageProps>> = () => {
   const navigate = useNavigate()
-  const { data: trophies, isLoading: isLoadingTrophies } = useGetUserChallengeTrophies()
-  const { data: challenges, isLoading } = useGetUserChallengeAvailable()
+  const { data: trophies, isLoading } = useGetUserChallengeTrophies()
   const { t } = useTranslation()
 
   // return
-  return !isLoading || !isLoadingTrophies ? (
+  return !isLoading ? (
     <>
       <Layout>
         <div className={'overflow-y-auto min-h-full overflow-x-hidden pb-[70px]'}>
@@ -33,6 +31,7 @@ const TrophiesPage: FC<Readonly<ITrophiesPageProps>> = () => {
             <div
               className={'cursor-pointer  transition-all duration-300 active:scale-95'}
               onClick={() => navigate(-1)}
+              data-testid={'back-button'}
             >
               <div className="flex items-center justify-center w-10 h-10 rounded-full border border-backButtonBorder hover:opacity-70 transition-all duration-300">
                 <img width={24} height={24} src={arrowBackSvg} alt="arrow-back" />
@@ -63,10 +62,7 @@ const TrophiesPage: FC<Readonly<ITrophiesPageProps>> = () => {
         </div>
       </Layout>
 
-      <DiscoverModal
-        withTitle={!trophies || trophies.length === 0}
-        isEmpty={!challenges || challenges.length === 0}
-      />
+      <DiscoverModal withTitle={!trophies || trophies.length === 0} isEmpty={false} />
     </>
   ) : null
 }

@@ -23,19 +23,19 @@ describe('TrophiesPage', () => {
     expect(container.firstChild).toBeNull()
   })
 
-  // test('trophies===undefined', async () => {
-  //   ;(useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
-  //     data: undefined,
-  //     isLoading: false,
-  //   })
-  //   ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
-  //     data: undefined,
-  //     isLoading: false,
-  //   })
-  //   const { container } = render(<TrophiesPage />)
-  //   expect(container.firstChild).not.toBeNull()
-  //   const img = await screen.findByAltText('trophy')
-  //   // logRoles(container)
-  //   expect(img).toBeInTheDocument()
-  // })
+  test('trophies===undefined', async () => {
+    ;(useGetUserChallengeTrophies as jest.Mock).mockReturnValue({
+      data: undefined,
+      isLoading: false,
+    })
+    ;(useGetUserChallengeAvailable as jest.Mock).mockReturnValue({
+      data: undefined,
+      isLoading: false,
+    })
+    const { container } = render(<TrophiesPage />)
+    expect(container.firstChild).not.toBeNull()
+    const img = await screen.findByAltText('trophy')
+    // logRoles(container)
+    expect(img).toBeInTheDocument()
+  })
 })

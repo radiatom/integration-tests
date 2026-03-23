@@ -8,16 +8,13 @@ import '@/i18n'
 beforeAll(() => {
   Object.defineProperty(global.Image.prototype, 'src', {
     set(src: string) {
-      // Імітуємо асинхронність завантаження
       setTimeout(() => {
         if (src.includes('fail') || src === '') {
-          // Викликаємо onerror, якщо посилання "бите"
           this.onerror?.(new Event('error'))
         } else {
-          // Викликаємо onload, якщо все добре
           this.onload?.()
         }
-      }, 50) // невелика затримка для реалістичності
+      }, 50)
     },
   })
 })

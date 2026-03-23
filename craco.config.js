@@ -31,6 +31,7 @@ module.exports = {
     configure: {
       moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/src/$1',
+        '^axios$': 'axios/dist/node/axios.cjs',
       },
     },
   },

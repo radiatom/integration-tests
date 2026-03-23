@@ -18,3 +18,10 @@ beforeAll(() => {
     },
   })
 })
+
+// useNavigate
+export const mockUseNavigate = jest.fn()
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockUseNavigate,
+}))

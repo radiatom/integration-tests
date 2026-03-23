@@ -3,6 +3,7 @@ import { screen } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import ModalExitWorkout from '@/components/ModalExitWorkout/ModalExitWorkout'
 import { render } from '@/test-utils'
+import { mockUseNavigate } from '@/setupTests'
 
 describe('ModalExitWorkout folder', () => {
   const mockOnClose = jest.fn()
@@ -55,5 +56,28 @@ describe('ModalExitWorkout folder', () => {
     render(<ModalExitWorkout isOpenModal onClose={mockOnClose} />)
     await user.click(screen.getByTestId('close-modal-svg'))
     expect(mockOnClose).toHaveBeenCalled()
+  })
+
+  test('close modal with close-modal-svg in error', async () => {
+    user.setup()
+    render(<ModalExitWorkout isOpenModal onClose={() => {}} />)
+    await user.click(screen.getByRole('button', { name: 'End workout' }))
+    await user.click(screen.getByTestId('close-modal-svg'))
+    expect(mockUseNavigate).toHaveBeenCalled()
+  })
+
+  test('close modal with OK in error', async () => {
+    user.setup()
+    render(<ModalExitWorkout isOpenModal onClose={() => {}} />)
+    await user.click(screen.getByRole('button', { name: 'End workout' }))
+    await user.click(screen.getByRole('button', { name: 'ok' }))
+    expect(mockUseNavigate).toHaveBeenCalled()
+  })
+
+  test('close modal with isCompletedWorkout', async () => {
+    user.setup()
+    render(<ModalExitWorkout isOpenModal onClose={() => {}} isCompletedWorkout />)
+    await user.click(screen.getByRole('button', { name: 'End workout' }))
+    expect(mockUseNavigate).toHaveBeenCalled()
   })
 })

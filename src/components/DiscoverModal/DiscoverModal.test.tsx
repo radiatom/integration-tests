@@ -4,14 +4,9 @@ import { render } from '@/test-utils'
 import useGetUserChallengeAvailable from '@/hooks/useGetUserChallengeAvailable'
 import DiscoverModal from '@/components/DiscoverModal/DiscoverModal'
 import user from '@testing-library/user-event'
+import { mockUseNavigate } from '@/setupTests'
 
 jest.mock('@/hooks/useGetUserChallengeAvailable')
-
-const mockUseNavigate = jest.fn()
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockUseNavigate,
-}))
 
 describe('DiscoverModal folder', () => {
   test('isEmpty={true}', () => {

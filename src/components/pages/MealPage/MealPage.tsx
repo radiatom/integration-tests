@@ -18,7 +18,7 @@ const MealPage: FC<Readonly<IMealPageProps>> = () => {
 
   const { data: mealData, isLoading } = useMeal(idMeal)
 
-  const metricType = mealData?.page.ingredients[0].metricType
+  const metricType = mealData?.page?.ingredients[0].metricType
 
   const steps = useMemo(
     () =>
